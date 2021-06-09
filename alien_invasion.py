@@ -163,6 +163,7 @@ class AlienInvasion:
         self.settings.fleet_direction *= -1
 
     def _quit_game(self):
+        self.stats.store_high_score(self.stats.high_score)
         pygame.display.quit()
         sys.exit()
 
